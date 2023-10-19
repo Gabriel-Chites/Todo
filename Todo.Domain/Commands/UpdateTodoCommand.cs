@@ -1,11 +1,11 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
+using MediatR;
 using Todo.Domain.Commands.Contracts;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Todo.Domain.Commands;
 
-public class UpdateTodoCommand : Notifiable, ICommand
+public class UpdateTodoCommand : Notifiable, ICommand, IRequest<GenericCommandResult>
 {
     public UpdateTodoCommand() { }
     public UpdateTodoCommand(Guid id, string title, string user)

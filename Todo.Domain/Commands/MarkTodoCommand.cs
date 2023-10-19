@@ -1,10 +1,11 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
+using MediatR;
 using Todo.Domain.Commands.Contracts;
 
 namespace Todo.Domain.Commands;
 
-public abstract class MarkTodoCommand : Notifiable, ICommand
+public abstract class MarkTodoCommand : Notifiable, ICommand, IRequest<ICommandResult>
 {
     public MarkTodoCommand() { }
 
