@@ -23,7 +23,7 @@ public class CreateTodoCommand : Notifiable, ICommand, IRequest<ICommandResult>
     public string Title { get; set; }
 
     public string User { get; set; }
-    //testing gitd
+
     public DateTime Date { get; set; }
 
     public void Validate()
