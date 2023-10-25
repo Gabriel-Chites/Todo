@@ -7,4 +7,6 @@ public interface ITodoRepository
     Task Create(TodoItem todo);
 
     Task Update(TodoItem todo);
+
+    Task<TodoItem> GetTodoById(Guid id, string user);
 }

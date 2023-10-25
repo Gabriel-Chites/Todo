@@ -2,6 +2,10 @@
 
 public class TodoItem : Entity
 {
+    public TodoItem()
+    {
+    }
+
     public TodoItem(string title, string user, DateTime date)
     {
         Title = title;
