@@ -8,5 +8,13 @@ public interface ITodoRepository
 
     Task Update(TodoItem todo);
 
-    Task<TodoItem> GetTodoById(Guid id, string user);
+    Task<TodoItem?> GetTodoById(Guid id, string user);
+
+    IEnumerable<TodoItem> GetAll(string user);
+
+    IEnumerable<TodoItem> GetAllDone(string user);
+
+    IEnumerable<TodoItem> GetAllUndone(string user);
+
+    IEnumerable<TodoItem> GetByPeriod(string user, DateTime date, bool done);
 }
